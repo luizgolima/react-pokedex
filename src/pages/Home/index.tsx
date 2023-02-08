@@ -14,7 +14,10 @@ const HomePage = () => {
   console.log(getLoadablePokemon);
   return (
     <div>
-      <input type="text" onChange={(event) => setPokemon(event.target.value)} />
+      <input
+        type="text"
+        onChange={(event) => setSearchPokemon(event.target.value)}
+      />
       <button
         onClick={() => {
           setPokemon(searchPokemon);
@@ -22,6 +25,18 @@ const HomePage = () => {
       >
         Procurar
       </button>
+      {getLoadablePokemon?.state === "loading" && <p>Loading...</p>}
+      {getLoadablePokemon?.state === "hasValue" &&
+        getLoadablePokemon?.contents !== undefined && (
+          <div>
+            <img
+              src={getLoadablePokemon?.contents?.sprites?.front_default}
+              width="150px"
+              alt={`pokemon-${getLoadablePokemon?.contents?.name}`}
+            />
+            <h3>{getLoadablePokemon?.contents?.name}</h3>
+          </div>
+        )}
       {pokemon}
     </div>
   );

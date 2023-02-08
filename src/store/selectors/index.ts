@@ -7,7 +7,7 @@ const selectorGetPokemon = selector({
   get: async ({ get }) => {
     const pokemon = get(atomPokemon);
     if (pokemon) {
-      const data = requester({
+      const { data } = await requester({
         url: `https://pokeapi.co/api/v2`,
       }).get(`/pokemon/${pokemon.toLowerCase().trim()}`);
       return data;
