@@ -29,7 +29,7 @@ const Header = () => {
           <FlexBox align="center" justify="flex-end" direction="row" gap="xxxs">
             <a
               target="_blank"
-              href="https://github.com/ArielBetti"
+              href="https://github.com/luizgolima"
               rel="noreferrer"
             >
               <Atom.HeaderItem>
@@ -38,7 +38,7 @@ const Header = () => {
             </a>
             <a
               target="_blank"
-              href="https://www.linkedin.com/in/ariel-betti/"
+              href="https://www.linkedin.com/in/luizgolima/"
               rel="noreferrer"
             >
               <Atom.HeaderItem>
