@@ -1,15 +1,14 @@
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValueLoadable } from "recoil";
 import atomPokemon from "../../store/atoms";
-import selectorPokemonLength from "../../store/selectors";
+import selectorGetPokemon from "../../store/selectors";
 
 const HomePage = () => {
   const [pokemon, setPokemon] = useRecoilState(atomPokemon);
-  const pokemonLength = useRecoilValue(selectorPokemonLength);
+  const getLoadablePokemon = useRecoilValueLoadable(selectorGetPokemon);
   return (
     <div>
       <input type="text" onChange={(event) => setPokemon(event.target.value)} />
       {pokemon}
-      <p>Length: {pokemonLength}</p>
     </div>
   );
 };
