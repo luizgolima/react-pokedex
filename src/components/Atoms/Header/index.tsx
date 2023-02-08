@@ -1,7 +1,7 @@
 import {useNavigate} from "react-router-dom";
 
 // icons
-import {BsGithub, BsLinkedin, BsYoutube} from "react-icons/bs";
+import {BsGithub, BsLinkedin} from "react-icons/bs";
 import {MdHome} from "react-icons/md";
 
 // components
@@ -43,15 +43,6 @@ const Header = () => {
             >
               <Atom.HeaderItem>
                 <BsLinkedin size="20" />
-              </Atom.HeaderItem>
-            </a>
-            <a
-              target="_blank"
-              href="https://www.youtube.com/channel/UCXCyTeW1V33Ki4PyMLCn2zg"
-              rel="noreferrer"
-            >
-              <Atom.HeaderItem>
-                <BsYoutube size="20" />
               </Atom.HeaderItem>
             </a>
           </FlexBox>
