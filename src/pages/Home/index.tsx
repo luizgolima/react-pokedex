@@ -1,5 +1,14 @@
+import { useRecoilState } from "recoil";
+import atomPokemon from "../../store/atoms";
+
 const HomePage = () => {
-  return <div>Olá mundo!</div>;
+  const [pokemon, setPokemon] = useRecoilState(atomPokemon);
+  return (
+    <div>
+      <input type="text" onChange={(event) => setPokemon(event.target.value)} />
+      {pokemon}
+    </div>
+  );
 };
 
 export default HomePage;

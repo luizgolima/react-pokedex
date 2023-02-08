@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 const atomPokemon = atom({
   key: "atomPokemon",
-  default: undefined,
+  default: "",
 });
 
 export default atomPokemon;
