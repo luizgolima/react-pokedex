@@ -24,6 +24,7 @@ export const Container = styled(FlexBox)`
 
   &:active {
     scale: 1;
+    box-shadow: 0 0 0 2px ${(props) => props.theme.colors.primary};
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
