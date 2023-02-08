@@ -13,7 +13,11 @@ export const HeaderContainer = styled(FlexBox)`
     transition: all ${(props) => props.theme.transitions.time} ease;
 
     &:hover {
-      scale: 0.75;
+      scale: 0.65;
+    }
+
+    &:active {
+      scale: 0.5;
     }
 
     @media (max-width: 576px) {
@@ -25,7 +29,7 @@ export const HeaderContainer = styled(FlexBox)`
     }
 
     @media (min-width: 769px) {
-      scale: 0.7;
+      scale: 0.6;
     }
   }
 `;
