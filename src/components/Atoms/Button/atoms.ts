@@ -8,6 +8,16 @@ export const Button = styled.button`
   padding: 10px;
   font-size: 1em;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 0 1px white;
+    background-color: #d50574;
+  }
+
+  &:active {
+    scale: 0.95;
+  }
 
   :disabled {
     cursor: not-allowed;
