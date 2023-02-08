@@ -1,9 +1,9 @@
-import { FC } from "react";
+import {FC} from "react";
 // components
-import { FlexBox } from "../Flexbox";
+import {FlexBox} from "../Flexbox";
 import * as Atom from "./atoms";
 // types
-import type { ICardProps } from "./types";
+import type {ICardProps} from "./types";
 // ::
 const Card: FC<ICardProps> = ({ id, image, name, preview, type }) => {
   return (
@@ -30,7 +30,7 @@ const Card: FC<ICardProps> = ({ id, image, name, preview, type }) => {
         direction="row"
       >
         <Atom.PokemonText type={type}>{name}</Atom.PokemonText>
-        {preview && <img src={preview} alt="" />}
+        {preview && <img src={preview} alt={`Preview of ${name}`} />}
       </Atom.PokemonPreviewSection>
     </Atom.Container>
   );
