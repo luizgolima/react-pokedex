@@ -11,8 +11,13 @@ export const HeaderContainer = styled(FlexBox)`
   .pokemon-logo {
     cursor: pointer;
     transition: all ${(props) => props.theme.transitions.time} ease;
+    background-color: ${(props) => props.theme.colors.light[1]};
+    box-shadow: 0 0 0 5px ${(props) => props.theme.colors.neutral[3]};
+    padding: ${(props) => props.theme.spacing.xs};
+    border-radius: 50%;
 
-    &:hover {
+    &:hover,
+    &:focus {
       scale: 0.65;
     }
 
