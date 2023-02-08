@@ -1,11 +1,15 @@
-import { selector } from "recoil";
-import atomPokemon from "../atoms";
+import { selector } from "recoil"; //recoil: atoms
+import { requester } from "../../api/requester";
+import atomPokemon from "../atoms"; //api
 
 const selectorPokemonLength = selector({
   key: "selectorPokemonLength",
-  get: ({ get }) => {
+  get: async ({ get }) => {
     const pokemon = get(atomPokemon);
-    return pokemon?.length;
+    const data = requester({
+      url: `https://pokeapi.co/api/v2`,
+    }).get(`/pokemon/${pokemon}`);
+    return data;
   },
 });
 
