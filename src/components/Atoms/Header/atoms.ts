@@ -7,6 +7,27 @@ export const HeaderContainer = styled(FlexBox)`
   h2 {
     margin: 0;
   }
+
+  .pokemon-logo {
+    cursor: pointer;
+    transition: all ${(props) => props.theme.transitions.time} ease;
+
+    &:hover {
+      scale: 0.75;
+    }
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+
+    @media (min-width: 577px) and (max-width: 768px) {
+      scale: 0.5;
+    }
+
+    @media (min-width: 769px) {
+      scale: 0.7;
+    }
+  }
 `;
 
 export const HeaderItem = styled.div`

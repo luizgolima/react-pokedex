@@ -1,4 +1,5 @@
 import {useNavigate} from "react-router-dom";
+import pokemonLogo from "../../../assets/pokemon-logo.png";
 
 // icons
 import {BsGithub, BsLinkedin} from "react-icons/bs";
@@ -25,6 +26,9 @@ const Header = () => {
         <Atom.HeaderItem>
           <MdOutlineFavorite size="20" />
         </Atom.HeaderItem>
+        <div className="pokemon-logo">
+          <img src={pokemonLogo} alt="Pokemon logo" />
+        </div>
         <div>
           <FlexBox align="center" justify="flex-end" direction="row" gap="xxxs">
             <a
