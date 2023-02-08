@@ -11,9 +11,16 @@ export const Container = styled(FlexBox)`
   max-width: 225px;
   background-color: ${(props) => props?.theme?.colors?.neutral?.pure};
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px;
   padding: 10px;
   height: 320px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    scale: 1.02;
+    box-shadow: 0 0 0 1px ${(props) => props?.theme?.colors?.light?.pure};
+  }
 
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     max-width: 100%;
