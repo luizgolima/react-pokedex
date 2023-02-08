@@ -25,6 +25,7 @@ export const HeaderItem = styled.div`
   }
 
   &:active {
-    scale: 0.95;
+    scale: 0.9;
+    box-shadow: 0 0 0 2px ${(props) => props.theme.colors.primary};
   }
 `;
