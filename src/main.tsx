@@ -6,6 +6,7 @@ import { ResetCss } from "./theme/globalStyles";
 import { ThemeProvider } from "styled-components";
 import { dark } from "./theme";
 import AppRouter from "./routes";
+import { Header } from "./components";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <ThemeProvider theme={dark()}>
         <ResetCss />
         <BrowserRouter>
+          <Header />
           <AppRouter />
         </BrowserRouter>
       </ThemeProvider>
