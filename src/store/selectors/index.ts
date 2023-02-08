@@ -2,8 +2,8 @@ import { selector } from "recoil"; //recoil: atoms
 import { requester } from "../../api/requester";
 import atomPokemon from "../atoms"; //api
 
-const selectorPokemonLength = selector({
-  key: "selectorPokemonLength",
+const selectorGetPokemon = selector({
+  key: "selectorGetPokemon",
   get: async ({ get }) => {
     const pokemon = get(atomPokemon);
     const data = requester({
@@ -13,4 +13,4 @@ const selectorPokemonLength = selector({
   },
 });
 
-export default selectorPokemonLength;
+export default selectorGetPokemon;
