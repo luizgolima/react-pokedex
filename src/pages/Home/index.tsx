@@ -1,18 +1,36 @@
-import {useCallback, useEffect, useMemo} from "react";
-import {useRecoilState, useRecoilValueLoadable, useSetRecoilState,} from "recoil";
+import { useCallback, useEffect, useMemo } from "react";
+import {
+  useRecoilState,
+  useRecoilValueLoadable,
+  useSetRecoilState,
+} from "recoil";
 
 // components
-import {Container, FlexBox, InitialPokemons, PokemonsSection, SinglePokemon,} from "../../components";
+import {
+  Container,
+  FlexBox,
+  InitialPokemons,
+  PokemonsSection,
+  SinglePokemon,
+} from "../../components";
 import PokemonSearch from "../../components/Molecules/PokemonSearch";
 
 // recoil: atoms
-import {atomPokemon, atomPokemonFetch, atomPokemonList,} from "../../store/atoms";
+import {
+  atomPokemon,
+  atomPokemonFetch,
+  atomPokemonList,
+} from "../../store/atoms";
 
 // recoil: hashs
-import {atomHashPokemonsFetch, atomHashPokemonsList} from "../../store/hashs";
+import { atomHashPokemonsFetch, atomHashPokemonsList } from "../../store/hashs";
 
 // recoil: selectors
-import {selectorFetchPokemons, selectorGetPokemon, selectorGetPokemons,} from "../../store/selectors";
+import {
+  selectorFetchPokemons,
+  selectorGetPokemon,
+  selectorGetPokemons,
+} from "../../store/selectors";
 
 // ::
 const HomePage = () => {

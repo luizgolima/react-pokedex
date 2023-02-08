@@ -1,4 +1,4 @@
-import {FC} from "react";
+import { FC } from "react";
 
 // icons
 import pokeBall from "../../../assets/pokeball-rotate.png";
@@ -7,7 +7,7 @@ import pokeBall from "../../../assets/pokeball-rotate.png";
 import * as Atom from "./atoms";
 
 // types
-import type {ILoading} from "./types";
+import type { ILoading } from "./types";
 
 // ::
 const Loading: FC<ILoading> = ({ isLoading, loadingText }) => {

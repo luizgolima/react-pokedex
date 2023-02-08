@@ -1,12 +1,12 @@
-import {FC} from "react";
-import {useRecoilState} from "recoil";
+import { FC } from "react";
+import { useRecoilState } from "recoil";
 // icons
-import {MdAutorenew} from "react-icons/md";
+import { MdAutorenew } from "react-icons/md";
 // components
-import {Button, Card, FlexBox, Loading, PokedexView} from "../../";
-import {atomHashPokemon} from "../../../store/hashs";
+import { Button, Card, FlexBox, Loading, PokedexView } from "../../";
+import { atomHashPokemon } from "../../../store/hashs";
 // types
-import type {ISinglePokemon} from "./types";
+import type { ISinglePokemon } from "./types";
 // ::
 const SinglePokemon: FC<ISinglePokemon> = ({ error, loading, pokemon }) => {
   // recoil: states

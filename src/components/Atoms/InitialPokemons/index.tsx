@@ -1,4 +1,4 @@
-import {FlexBox} from "../Flexbox";
+import { FlexBox } from "../Flexbox";
 // components
 import * as Atom from "./atoms";
 // ::

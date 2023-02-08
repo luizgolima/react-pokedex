@@ -1,17 +1,24 @@
-import {FC} from "react";
-import {useRecoilState} from "recoil";
+import { FC } from "react";
+import { useRecoilState } from "recoil";
 
 // icons
-import {MdAdd, MdAutorenew} from "react-icons/md";
+import { MdAdd, MdAutorenew } from "react-icons/md";
 
 // components
-import {Button, Card, FlexBox, Loading, PokedexView, PokemonCount,} from "../../";
+import {
+  Button,
+  Card,
+  FlexBox,
+  Loading,
+  PokedexView,
+  PokemonCount,
+} from "../../";
 
 // recoil: atoms
-import {atomPokemonOffset} from "../../../store/atoms";
+import { atomPokemonOffset } from "../../../store/atoms";
 
 // types
-import type {IPokemonsSection} from "./types";
+import type { IPokemonsSection } from "./types";
 
 // ::
 const PokemonsSection: FC<IPokemonsSection> = ({

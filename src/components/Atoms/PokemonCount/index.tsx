@@ -1,13 +1,13 @@
-import {FC} from "react";
+import { FC } from "react";
 
 // icons
-import {MdCatchingPokemon} from "react-icons/md";
+import { MdCatchingPokemon } from "react-icons/md";
 
 // components
 import * as Atom from "./atoms";
 
 // types
-import type {IPokemoncount} from "./types";
+import type { IPokemoncount } from "./types";
 
 // ::
 const PokemonCount: FC<IPokemoncount> = ({ count }) => {

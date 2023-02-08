@@ -1,11 +1,11 @@
-import {FC} from "react";
-import {FlexBox} from "../Flexbox";
+import { FC } from "react";
+import { FlexBox } from "../Flexbox";
 
 // components
 import * as Atom from "./atoms";
 
 // types
-import type {IInput} from "./types";
+import type { IInput } from "./types";
 
 // ::
 const Input: FC<IInput> = ({ label, ...rest }) => {

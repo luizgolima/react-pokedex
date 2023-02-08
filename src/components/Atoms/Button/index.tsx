@@ -1,9 +1,9 @@
-import {FC} from "react";
-import {FlexBox} from "../Flexbox";
+import { FC } from "react";
+import { FlexBox } from "../Flexbox";
 // components
 import * as Atom from "./atoms";
 // types
-import type {IButton} from "./types";
+import type { IButton } from "./types";
 // ::
 const Button: FC<IButton> = ({ children, disabled, onClick }) => {
   return (

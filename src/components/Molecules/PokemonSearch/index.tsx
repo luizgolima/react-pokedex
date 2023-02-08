@@ -1,12 +1,12 @@
-import {useState} from "react";
-import {useSetRecoilState} from "recoil";
+import { useState } from "react";
+import { useSetRecoilState } from "recoil";
 // icons
-import {MdSearch} from "react-icons/md";
+import { MdSearch } from "react-icons/md";
 // recoil: atoms
-import {atomPokemonSearch} from "../../../store/atoms";
+import { atomPokemonSearch } from "../../../store/atoms";
 // components
 import * as Atom from "./atoms";
-import {Button, Input} from "../..";
+import { Button, Input } from "../..";
 // ::
 const PokemonSearch = () => {
   // local: states
