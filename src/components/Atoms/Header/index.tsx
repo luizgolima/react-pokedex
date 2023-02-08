@@ -1,13 +1,13 @@
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 // icons
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { MdHome } from "react-icons/md";
+import {BsGithub, BsLinkedin} from "react-icons/bs";
+import {MdOutlineFavorite} from "react-icons/md";
 
 // components
 import * as Atom from "./atoms";
-import { Container } from "../Container";
-import { FlexBox } from "../Flexbox";
+import {Container} from "../Container";
+import {FlexBox} from "../Flexbox";
 
 // ::
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
         wrap="wrap"
       >
         <Atom.HeaderItem>
-          <MdHome size="20" />
+          <MdOutlineFavorite size="20" />
         </Atom.HeaderItem>
         <div>
           <FlexBox align="center" justify="flex-end" direction="row" gap="xxxs">
