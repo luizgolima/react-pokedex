@@ -22,6 +22,10 @@ export const Container = styled(FlexBox)`
     box-shadow: 0 0 0 1px ${(props) => props?.theme?.colors?.light?.pure};
   }
 
+  &:active {
+    scale: 1;
+  }
+
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     max-width: 100%;
   }
