@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FlexBox } from "../Flexbox";
-import { TPokemonType } from "../../interface";
+import { TPokemonType } from "../../../interface";
 
 interface TAtomPokemonType {
   type: TPokemonType;
