@@ -5,7 +5,7 @@ const selectorPokemonLength = selector({
   key: "selectorPokemonLength",
   get: ({ get }) => {
     const pokemon = get(atomPokemon);
-    return pokemon.length;
+    return pokemon?.length;
   },
 });
 
