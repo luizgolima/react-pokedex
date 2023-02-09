@@ -3,7 +3,7 @@ import pokemonLogo from "../../../assets/pokemon-logo.png";
 
 // icons
 import {BsGithub, BsLinkedin} from "react-icons/bs";
-import {MdOutlineFavorite} from "react-icons/md";
+import {MdOutlineFavorite, MdOutlineHome,} from "react-icons/md";
 
 // components
 import * as Atom from "./atoms";
@@ -23,9 +23,13 @@ const Header = () => {
         direction="row"
         wrap="wrap"
       >
-        <Link to="/favorites">
+        <Link to={window.location.pathname === "/" ? "/favorites" : "/"}>
           <Atom.HeaderItem>
-            <MdOutlineFavorite size="20" />
+            {window.location.pathname === "/" ? (
+              <MdOutlineFavorite size="20" />
+            ) : (
+              <MdOutlineHome size="20" />
+            )}
           </Atom.HeaderItem>
         </Link>
 

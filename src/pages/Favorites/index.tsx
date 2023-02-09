@@ -1,4 +1,5 @@
 import { Container, FlexBox } from "../../components";
+import React from "react";
 
 const FavoritesPage = () => {
   return (
