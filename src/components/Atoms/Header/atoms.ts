@@ -15,15 +15,8 @@ export const HeaderContainer = styled(FlexBox)`
     box-shadow: 0 0 0 5px ${(props) => props.theme.colors.neutral[3]};
     padding: ${(props) => props.theme.spacing.xs};
     border-radius: 50%;
-
-    &:hover,
-    &:focus {
-      scale: 0.65;
-    }
-
-    &:active {
-      scale: 0.5;
-    }
+    position: relative;
+    right: 29px;
 
     @media (max-width: 576px) {
       display: none;
@@ -31,10 +24,28 @@ export const HeaderContainer = styled(FlexBox)`
 
     @media (min-width: 577px) and (max-width: 768px) {
       scale: 0.5;
+
+      &:hover,
+      &:focus {
+        scale: 0.55;
+      }
+
+      &:active {
+        scale: 0.5;
+      }
     }
 
     @media (min-width: 769px) {
       scale: 0.6;
+
+      &:hover,
+      &:focus {
+        scale: 0.65;
+      }
+
+      &:active {
+        scale: 0.6;
+      }
     }
   }
 `;

@@ -3,7 +3,7 @@ import pokemonLogo from "../../../assets/pokemon-logo.png";
 
 // icons
 import {BsGithub, BsLinkedin} from "react-icons/bs";
-import {MdOutlineFavorite, MdOutlineHome,} from "react-icons/md";
+import {MdOutlineFavorite, MdOutlineHome} from "react-icons/md";
 
 // components
 import * as Atom from "./atoms";
@@ -23,41 +23,48 @@ const Header = () => {
         direction="row"
         wrap="wrap"
       >
-        <Link to={window.location.pathname === "/" ? "/favorites" : "/"}>
-          <Atom.HeaderItem>
-            {window.location.pathname === "/" ? (
-              <MdOutlineFavorite size="20" />
-            ) : (
-              <MdOutlineHome size="20" />
-            )}
-          </Atom.HeaderItem>
-        </Link>
+        <FlexBox align="center" justify="space-between" direction="row">
+          <div>
+            <FlexBox
+              align="center"
+              justify="flex-start"
+              direction="row"
+              gap="xxxs"
+            >
+              <a
+                target="_blank"
+                href="https://github.com/luizgolima"
+                rel="noreferrer"
+              >
+                <Atom.HeaderItem>
+                  <BsGithub size="20" />
+                </Atom.HeaderItem>
+              </a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/luizgolima/"
+                rel="noreferrer"
+              >
+                <Atom.HeaderItem>
+                  <BsLinkedin size="20" />
+                </Atom.HeaderItem>
+              </a>
+            </FlexBox>
+          </div>
+          <div className="pokemon-logo" onClick={() => navigate("/")}>
+            <img src={pokemonLogo} alt="Pokemon logo" />
+          </div>
 
-        <div className="pokemon-logo" onClick={() => navigate("/")}>
-          <img src={pokemonLogo} alt="Pokemon logo" />
-        </div>
-        <div>
-          <FlexBox align="center" justify="flex-end" direction="row" gap="xxxs">
-            <a
-              target="_blank"
-              href="https://github.com/luizgolima"
-              rel="noreferrer"
-            >
-              <Atom.HeaderItem>
-                <BsGithub size="20" />
-              </Atom.HeaderItem>
-            </a>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/luizgolima/"
-              rel="noreferrer"
-            >
-              <Atom.HeaderItem>
-                <BsLinkedin size="20" />
-              </Atom.HeaderItem>
-            </a>
-          </FlexBox>
-        </div>
+          <Link to={window.location.pathname === "/" ? "/favorites" : "/"}>
+            <Atom.HeaderItem>
+              {window.location.pathname === "/" ? (
+                <MdOutlineFavorite size="20" />
+              ) : (
+                <MdOutlineHome size="20" />
+              )}
+            </Atom.HeaderItem>
+          </Link>
+        </FlexBox>
       </Atom.HeaderContainer>
     </Container>
   );
