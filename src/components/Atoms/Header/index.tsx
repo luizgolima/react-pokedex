@@ -1,4 +1,4 @@
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import pokemonLogo from "../../../assets/pokemon-logo.png";
 
 // icons
@@ -9,6 +9,7 @@ import {MdOutlineFavorite} from "react-icons/md";
 import * as Atom from "./atoms";
 import {Container} from "../Container";
 import {FlexBox} from "../Flexbox";
+import React from "react";
 
 // ::
 const Header = () => {
@@ -17,16 +18,18 @@ const Header = () => {
   return (
     <Container>
       <Atom.HeaderContainer
-        onClick={() => navigate("/")}
         align="center"
         justify="space-between"
         direction="row"
         wrap="wrap"
       >
-        <Atom.HeaderItem>
-          <MdOutlineFavorite size="20" />
-        </Atom.HeaderItem>
-        <div className="pokemon-logo">
+        <Link to="/favorites">
+          <Atom.HeaderItem>
+            <MdOutlineFavorite size="20" />
+          </Atom.HeaderItem>
+        </Link>
+
+        <div className="pokemon-logo" onClick={() => navigate("/")}>
           <img src={pokemonLogo} alt="Pokemon logo" />
         </div>
         <div>
