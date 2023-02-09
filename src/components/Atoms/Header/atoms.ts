@@ -58,15 +58,14 @@ export const HeaderItem = styled.div`
   cursor: pointer;
   border-radius: 6px;
   padding: ${(props) => props.theme.spacing.xs};
-  transition: all ${(props) => props.theme.transitions.time} ease;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.neutral.pure};
     box-shadow: 0 0 0 1px ${(props) => props?.theme?.colors?.light?.pure};
   }
 
   &:active {
     scale: 0.9;
-    box-shadow: 0 0 0 2px ${(props) => props.theme.colors.primary};
+    box-shadow: 0 0 0 1px ${(props) => props.theme.colors.primary};
   }
 `;
