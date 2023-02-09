@@ -5,6 +5,7 @@ import * as Atom from "./atoms";
 // types
 import type {ICardProps} from "./types";
 // ::
+
 const Card: FC<ICardProps> = ({ id, image, name, preview, type }) => {
   return (
     <Atom.Container

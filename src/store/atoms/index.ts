@@ -25,3 +25,8 @@ export const atomPokemon = atom<IPokemon>({
   key: "atomPokemon",
   default: undefined,
 });
+
+export const atomFavoritePokemon = atom<IPokemon[]>({
+  key: "atomFavoritePokemon",
+  default: [],
+});
