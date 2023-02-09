@@ -24,6 +24,19 @@ const Header = () => {
         wrap="wrap"
       >
         <FlexBox align="center" justify="space-between" direction="row">
+          <Link to={window.location.pathname === "/" ? "/favorites" : "/"}>
+            <Atom.HeaderItem>
+              {window.location.pathname === "/" ? (
+                <MdOutlineFavorite size="20" />
+              ) : (
+                <MdOutlineHome size="20" />
+              )}
+            </Atom.HeaderItem>
+          </Link>
+
+          <div className="pokemon-logo" onClick={() => navigate("/")}>
+            <img src={pokemonLogo} alt="Pokemon logo" />
+          </div>
           <div>
             <FlexBox
               align="center"
@@ -51,19 +64,6 @@ const Header = () => {
               </a>
             </FlexBox>
           </div>
-          <div className="pokemon-logo" onClick={() => navigate("/")}>
-            <img src={pokemonLogo} alt="Pokemon logo" />
-          </div>
-
-          <Link to={window.location.pathname === "/" ? "/favorites" : "/"}>
-            <Atom.HeaderItem>
-              {window.location.pathname === "/" ? (
-                <MdOutlineFavorite size="20" />
-              ) : (
-                <MdOutlineHome size="20" />
-              )}
-            </Atom.HeaderItem>
-          </Link>
         </FlexBox>
       </Atom.HeaderContainer>
     </Container>

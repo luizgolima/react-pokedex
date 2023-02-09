@@ -16,7 +16,7 @@ export const HeaderContainer = styled(FlexBox)`
     padding: ${(props) => props.theme.spacing.xs};
     border-radius: 50%;
     position: relative;
-    right: 29px;
+    left: 29px;
 
     @media (max-width: 576px) {
       display: none;
